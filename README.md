@@ -150,6 +150,12 @@ $ docker run --rm -p 8080:80 -e CLIENT_ID="[Google Client ID]" wwwthoughtworks/b
 $ open http://localhost:8080
 ```
 
+### Building the Docker Image
+
+```
+$ docker build -t build-your-own-radar .
+```
+
 ### Advanced option - Docker image with a CSV/JSON file from the host machine
 
 You can check your setup by clicking on "Build my radar" and by loading the `csv`/`json` file from these locations:
@@ -161,6 +167,7 @@ You can check your setup by clicking on "Build my radar" and by loading the `csv
 $ docker pull wwwthoughtworks/build-your-own-radar
 $ docker run --rm -p 8080:80 -e SERVER_NAMES="localhost 127.0.0.1" -v /mnt/radar/files/:/opt/build-your-own-radar/files wwwthoughtworks/build-your-own-radar
 $ open http://localhost:8080
+$ open http://localhost:8080/?sheetId=http://localhost:8080/files/empty-radar.csv
 ```
 
 This will:
@@ -176,6 +183,20 @@ There is a sample csv and json file placed in `spec/end_to_end_tests/resources/l
 
 - If API Key is also available, same can be provided to the `docker run` command as `-e API_KEY=[Google API Key]`.
 - For setting the `publicPath` in the webpack config while using this image, the path can be passed as an environment variable called `ASSET_PATH`.
+
+### Advanced option - Docker image with a CSV/JSON predefined file
+
+You can define the `SHEET_ID` environment variable to hard-code file to be loaded:
+
+~~~
+$ docker run -it --rm \
+  -p 8080:80 \
+  -e SERVER_NAMES="localhost 127.0.0.1" \
+  -e SHEET_ID="http://localhost:8080/files/sample-radar.csv" \
+  -v $(pwd)/files:/opt/build-your-own-radar/files:ro \
+  build-your-own-radar
+$ open http://localhost:8080
+~~~
 
 ## Contribute
 
@@ -208,7 +229,7 @@ To run End to End tests in debug mode
 
 ### Don't want to install node? Run with one line docker
 
-     $ docker run -p 8080:8080 -v $PWD:/app -w /app -it node:10.15.3 /bin/sh -c 'npm install && npm run dev'
+     $ docker run -p 8080:8080 -v $PWD:/app -w /app -it node:16 /bin/sh -c 'npm install && npm run dev'
 
 **_Note:_** If you are facing Node-sass compile error while running, please prefix the command `npm rebuild node-sass` before `npm run dev`. like this
 

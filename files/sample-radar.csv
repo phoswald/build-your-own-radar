@@ -1,0 +1,19 @@
+name,ring,quadrant,isNew,description
+Docker,Adopt,Tools,FALSE,"Docker ist eine Freie Software zur Isolierung von Anwendungen mit Hilfe von Containervirtualisierung.
+Docker vereinfacht die Bereitstellung von Anwendungen, weil sich Container, die alle nötigen Pakete enthalten, leicht als Dateien transportieren und installieren lassen."
+BDD,Trial,Techniques,TRUE,"Behavior Driven Development (BDD) ist eine Technik der agilen Softwareentwicklung, welche die Zusammenarbeit zwischen Qualitätsmanagement und Business-Analyse in Softwareentwicklungsprojekten stärkt.
+Beim Behavior Driven Development werden während der Anforderungsanalyse die Aufgaben, Ziele und Ergebnisse der Software in einer bestimmten Textform festgehalten, die später als automatisierte Tests ausgeführt werden kann.
+Damit kann die Software auf ihre korrekte Implementierung getestet werden. Die Softwareanforderungen werden dabei meist in „Wenn-dann“-Sätzen basierend auf der Sprache des Domain-driven Designs verfasst.
+Damit soll der Übergang zwischen der Sprache der Definition der fachlichen Anforderungen und der Programmiersprache, mittels derer die Anforderungen umgesetzt werden, erleichtert werden. "
+Apache Kafka,Assess,Platforms,TRUE,"Franz Kafka war ein deutschsprachiger Schriftsteller.
+Sein Hauptwerk bilden neben drei Romanfragmenten zahlreiche Erzählungen. 
+Kafkas Werke wurden zum größeren Teil erst nach seinem Tod und gegen seine letztwillige Verfügung von Max Brod veröffentlicht, einem engen Freund und Vertrauten, den Kafka als Nachlassverwalter bestimmt hatte."
+JSF,Hold,Languages & Frameworks,FALSE,"JSF stands for Java Server Faces.
+It is a UI component based and event driven MVC web application framework which simplifies the UI construction by reusable UI component. 
+JSF specification provides a set of standard UI components which are reusable and extendable."
+Kubernetes,Adopt,Platforms,FALSE,"Kubernetes (auch als K8s bezeichnet) ist ein von Google entwickeltes Open-Source-System zur Verwaltung von Container–Anwendungen.
+In diesem Umfeld wird die Verwaltung der technischen Container–Infrastruktur auch als Orchestrierung bezeichnet. "
+Rust,Assess,Languages & Frameworks,FALSE,"Rust ist eine Multiparadigmen-Systemprogrammiersprache, die von der Open-Source-Community entwickelt wurde und unter anderem von Mozilla Research gesponsert wird.
+Sie wurde mit dem Ziel entwickelt, sicher, nebenläufig und praxisnah zu sein. 
+Sicherheit bezieht sich dabei insbesondere auf die Vermeidung von Programmfehlern, die zu Speicherzugriffsfehlern oder Pufferüberläufen und damit unter Umständen auch zu Sicherheitslücken führen, vor allem auch in nebenläufigen Prozessen.
+Im Gegensatz zu anderen Programmiersprachen mit automatischer Speicherverwaltung verwendet Rust hierfür keine Garbage Collection, sondern ein besonderes Typsystem. Dessen Typsicherheit wurde formal bewiesen."

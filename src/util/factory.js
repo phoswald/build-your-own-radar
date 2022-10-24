@@ -23,6 +23,8 @@ const ExceptionMessages = require('./exceptionMessages')
 const GoogleAuth = require('./googleAuth')
 const config = require('../config')
 
+var SHEET_ID = process.env.SHEET_ID;
+
 const plotRadar = function (title, blips, currentRadarName, alternativeRadars) {
   if (title.endsWith('.csv')) {
     title = title.substring(0, title.length - 4)
@@ -235,7 +237,7 @@ const GoogleSheetInput = function () {
   self.build = function () {
     var domainName = DomainName(window.location.search.substring(1))
     var queryString = window.location.href.match(/sheetId(.*)/)
-    var queryParams = queryString ? QueryParams(queryString[0]) : {}
+    var queryParams = queryString ? QueryParams(queryString[0]) : SHEET_ID ? { sheetId: SHEET_ID } : { }
 
     if (queryParams.sheetId && queryParams.sheetId.endsWith('.csv')) {
       sheet = CSVDocument(queryParams.sheetId)

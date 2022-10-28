@@ -146,7 +146,7 @@ We have released BYOR as a docker image for our users. The image is available in
 
 ```
 $ docker pull wwwthoughtworks/build-your-own-radar
-$ docker run --rm -p 8080:80 -e CLIENT_ID="[Google Client ID]" wwwthoughtworks/build-your-own-radar
+$ docker run --rm -p 8080:8080 -e CLIENT_ID="[Google Client ID]" wwwthoughtworks/build-your-own-radar
 $ open http://localhost:8080
 ```
 
@@ -165,7 +165,7 @@ You can check your setup by clicking on "Build my radar" and by loading the `csv
 
 ```
 $ docker pull wwwthoughtworks/build-your-own-radar
-$ docker run --rm -p 8080:80 -e SERVER_NAMES="localhost 127.0.0.1" -v /mnt/radar/files/:/opt/build-your-own-radar/files wwwthoughtworks/build-your-own-radar
+$ docker run --rm -p 8080:8080 -e SERVER_NAMES="localhost 127.0.0.1" -v /mnt/radar/files/:/opt/build-your-own-radar/files wwwthoughtworks/build-your-own-radar
 $ open http://localhost:8080
 $ open http://localhost:8080/?sheetId=http://localhost:8080/files/empty-radar.csv
 ```
@@ -190,8 +190,7 @@ You can define the `SHEET_ID` environment variable to hard-code file to be loade
 
 ~~~
 $ docker run -it --rm \
-  -p 8080:80 \
-  -e SERVER_NAMES="localhost 127.0.0.1" \
+  -p 8080:8080 \
   -e SHEET_ID="http://localhost:8080/files/sample-radar.csv" \
   -v $(pwd)/files:/opt/build-your-own-radar/files:ro \
   build-your-own-radar

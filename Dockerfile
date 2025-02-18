@@ -1,4 +1,6 @@
-FROM nginx:1.23.0
+FROM nginxinc/nginx-unprivileged:1.23.0
+
+USER 0:0
 
 RUN apt-get update && apt-get upgrade -y
 
@@ -16,6 +18,8 @@ COPY package-lock.json ./
 RUN npm ci
 
 COPY . ./
+
+USER 101:101
 
 # Override parent node image's entrypoint script (/usr/local/bin/docker-entrypoint.sh),
 # which tries to run CMD as a node command

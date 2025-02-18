@@ -21,3 +21,10 @@ cypress/
 .talismanrc
 
 .vscode/
+
+.project
+.settings/
+
+samples/radar.csv
+samples/radar.json
+volumes/

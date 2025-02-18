@@ -1,0 +1,5 @@
+name,ring,quadrant,isNew,description
+Foo,Ring 1,Quadrant 1,FALSE,"Description of Foo"
+Bar,Ring 2,Quadrant 2,TRUE,"Description of Bar"
+Baz,Ring 3,Quadrant 3,TRUE,"Description of Baz"
+FooBar,Ring 4,Quadrant 4,FALSE,"Description of FooBar"
